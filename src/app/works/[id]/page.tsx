@@ -12,7 +12,7 @@ type WorkDetailProps = {
 
 export default function WorkDetailPage({ params }: WorkDetailProps) {
     const workId = Number(params.id);
-    const work = works.find((item) => item.id === workId);
+    const work = works.find((item) => item.id === params.id);
 
     if (!work) {
         return (
@@ -39,7 +39,7 @@ export default function WorkDetailPage({ params }: WorkDetailProps) {
                     {/* 制作情報 */}
                     <ul className="work_info-list">
                         {/* 制作期間 */}
-                        {work.period?.length > 0 && (
+                        {work.period && work.period.length > 0 && (
                             <li className="work_info-item">
                                 <h3 className="work_info-img">
                                     <img

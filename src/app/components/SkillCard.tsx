@@ -1,9 +1,9 @@
 // app/components/SkillCard.tsx
 type SkillItem = {
-    id: number;
+    id: string;
     name: string;
     img: string;
-    text: string; // HTMLを含む
+    text: string; 
     link?: string;
 };
 

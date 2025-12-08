@@ -1,17 +1,7 @@
-// app/components/WorksList.tsx
 "use client";
 
 import Link from "next/link";
-import { works } from "../data/works";
-
-type Work = {
-    id: number;
-    title: string;
-    category: string;
-    role: string;
-    tools: string;
-    imageMain: string;
-};
+import { works, Work } from "../data/works";
 
 export default function WorksList() {
     return (

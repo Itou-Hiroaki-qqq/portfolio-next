@@ -29,13 +29,27 @@ export default function ContactForm() {
         }
 
         try {
+            // ① Firestore に保存
             await addDoc(collection(db, "contacts"), {
                 ...form,
                 createdAt: serverTimestamp(),
             });
 
+            // ② SendGrid API Route へ通知（管理者＋ユーザー）
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form),
+            });
+
+            if (!res.ok) {
+                console.error("SendGrid API Error:", await res.text());
+                alert("メール通知に失敗しました（Firestore には保存済み）");
+            }
+
             alert("送信が完了しました！");
 
+            // フォームを空にする
             setForm({
                 lastName: "",
                 firstName: "",

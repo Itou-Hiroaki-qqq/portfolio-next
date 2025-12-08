@@ -1,4 +1,3 @@
-// app/components/ContactForm.tsx
 "use client";
 
 import { useState } from "react";
@@ -15,12 +14,12 @@ export default function ContactForm() {
         message: "",
     });
 
-    // input ハンドラ
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
         setForm({ ...form, [e.target.id]: e.target.value });
     };
 
-    // 送信処理
     const submitForm = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -52,19 +51,30 @@ export default function ContactForm() {
     };
 
     return (
-        <section className="contact s-wrapper" id="contact">
+        <section className="contact s-wrapper mt-16" id="contact">
             <h2 className="section_title">Contact</h2>
 
-            <form onSubmit={submitForm} className="contact-form">
+            <form
+                onSubmit={submitForm}
+                className="
+                    max-w-[600px] mx-auto mt-6 p-8 bg-white rounded-xl 
+                    shadow-[0_4px_12px_rgba(0,0,0,0.08),0_-2px_8px_rgba(0,0,0,0.04)]
+                "
+            >
                 {/* 名前 */}
-                <div className="form-group">
-                    <label className="form-label">
-                        名前 <span className="badge badge-required">必須</span>
+                <div className="mb-6">
+                    <label className="font-bold block mb-2">
+                        名前
+                        <span className="text-white bg-red-500 text-xs px-2 py-0.5 rounded ml-2">
+                            必須
+                        </span>
                     </label>
 
-                    <div className="name-fields">
-                        <div>
-                            <label htmlFor="lastName">姓</label>
+                    <div className="flex gap-4">
+                        <div className="flex-1">
+                            <label htmlFor="lastName" className="text-sm">
+                                姓
+                            </label>
                             <input
                                 id="lastName"
                                 type="text"
@@ -72,11 +82,14 @@ export default function ContactForm() {
                                 value={form.lastName}
                                 onChange={handleChange}
                                 required
+                                className="w-full mt-1 p-3 border border-gray-300 rounded-md text-base"
                             />
                         </div>
 
-                        <div>
-                            <label htmlFor="firstName">名</label>
+                        <div className="flex-1">
+                            <label htmlFor="firstName" className="text-sm">
+                                名
+                            </label>
                             <input
                                 id="firstName"
                                 type="text"
@@ -84,15 +97,19 @@ export default function ContactForm() {
                                 value={form.firstName}
                                 onChange={handleChange}
                                 required
+                                className="w-full mt-1 p-3 border border-gray-300 rounded-md text-base"
                             />
                         </div>
                     </div>
                 </div>
 
                 {/* 会社名 */}
-                <div className="form-group">
-                    <label className="form-label">
-                        会社名 <span className="badge badge-optional">任意</span>
+                <div className="mb-6">
+                    <label className="font-bold block mb-1">
+                        会社名
+                        <span className="text-white bg-gray-500 text-xs px-2 py-0.5 rounded ml-2">
+                            任意
+                        </span>
                     </label>
 
                     <input
@@ -101,14 +118,21 @@ export default function ContactForm() {
                         placeholder="会社名"
                         value={form.company}
                         onChange={handleChange}
+                        className="w-full p-3 border border-gray-300 rounded-md text-base"
                     />
-                    <small className="note">特になければ未記入で結構です。</small>
+
+                    <small className="block text-sm text-gray-600 mt-1">
+                        特になければ未記入で結構です。
+                    </small>
                 </div>
 
                 {/* メール */}
-                <div className="form-group">
-                    <label className="form-label">
-                        メールアドレス <span className="badge badge-required">必須</span>
+                <div className="mb-6">
+                    <label className="font-bold block mb-1">
+                        メールアドレス
+                        <span className="text-white bg-red-500 text-xs px-2 py-0.5 rounded ml-2">
+                            必須
+                        </span>
                     </label>
 
                     <input
@@ -118,12 +142,15 @@ export default function ContactForm() {
                         value={form.email}
                         onChange={handleChange}
                         required
+                        className="w-full p-3 border border-gray-300 rounded-md text-base"
                     />
                 </div>
 
                 {/* メール確認 */}
-                <div className="form-group">
-                    <label className="form-label">確認のため再度ご入力ください</label>
+                <div className="mb-6">
+                    <label className="font-bold block mb-1">
+                        確認のため再度ご入力ください
+                    </label>
 
                     <input
                         id="confirmEmail"
@@ -132,13 +159,17 @@ export default function ContactForm() {
                         value={form.confirmEmail}
                         onChange={handleChange}
                         required
+                        className="w-full p-3 border border-gray-300 rounded-md text-base"
                     />
                 </div>
 
                 {/* メッセージ */}
-                <div className="form-group">
-                    <label className="form-label">
-                        お問い合わせ内容 <span className="badge badge-required">必須</span>
+                <div className="mb-6">
+                    <label className="font-bold block mb-1">
+                        お問い合わせ内容
+                        <span className="text-white bg-red-500 text-xs px-2 py-0.5 rounded ml-2">
+                            必須
+                        </span>
                     </label>
 
                     <textarea
@@ -148,11 +179,18 @@ export default function ContactForm() {
                         value={form.message}
                         onChange={handleChange}
                         required
+                        className="w-full p-3 border border-gray-300 rounded-md text-base resize-y"
                     />
                 </div>
 
                 {/* 送信ボタン */}
-                <button type="submit" className="submit-btn">
+                <button
+                    type="submit"
+                    className="
+                        w-full py-3 text-white font-bold rounded-md 
+                        bg-blue-500 hover:bg-blue-600 transition
+                    "
+                >
                     送信
                 </button>
             </form>

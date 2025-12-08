@@ -800,9 +800,13 @@ footer
 
 /* footer PC */
 @media (min-width:769px) {
+    footer {
+        margin-top: 50px;
+    }
+
     .wrapper--footer {
-        margin-top: 3.75rem;
-        padding: 1rem;
+        margin-top: 0;
+        padding: 16px;
     }
 
     .footer_group {

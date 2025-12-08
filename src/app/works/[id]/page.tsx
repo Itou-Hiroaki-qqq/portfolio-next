@@ -1,18 +1,12 @@
 import "./worksPage.css";
 import WorksList from "@/app/components/WorksList";
 import ContactForm from "@/app/components/ContactForm";
-
 import { works } from "@/app/data/works";
 
-type WorkDetailProps = {
-    params: {
-        id: string;
-    };
-};
-
-export default function WorkDetailPage({ params }: WorkDetailProps) {
-    const workId = Number(params.id);
-    const work = works.find((item) => item.id === params.id);
+export default async function WorkDetailPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params; // ← Promise を await して展開する
+    const workId = id; // works.ts は id: string 型なので Number にしない
+    const work = works.find((item) => item.id === workId);
 
     if (!work) {
         return (
@@ -25,10 +19,8 @@ export default function WorkDetailPage({ params }: WorkDetailProps) {
     return (
         <>
             <section className="work-detail s-wrapper">
-                {/* タイトル */}
                 <h2 className="page-title">{work.title}</h2>
 
-                {/* メイン画像 */}
                 <img
                     src={work.imageMain}
                     alt={work.title}
@@ -36,16 +28,14 @@ export default function WorkDetailPage({ params }: WorkDetailProps) {
                 />
 
                 <div className="ss-wrapper">
+
                     {/* 制作情報 */}
                     <ul className="work_info-list">
-                        {/* 制作期間 */}
+
                         {work.period && work.period.length > 0 && (
                             <li className="work_info-item">
                                 <h3 className="work_info-img">
-                                    <img
-                                        src="/assets/img/woksPage_period.png"
-                                        alt="製作期間"
-                                    />
+                                    <img src="/assets/img/woksPage_period.png" alt="製作期間" />
                                 </h3>
                                 <dl className="works_info-periodList">
                                     {work.period.map((p, index) => (
@@ -58,27 +48,19 @@ export default function WorkDetailPage({ params }: WorkDetailProps) {
                             </li>
                         )}
 
-                        {/* 使用ツール */}
                         {work.tools && (
                             <li className="work_info-item">
                                 <h3 className="work_info-img">
-                                    <img
-                                        src="/assets/img/woksPage_tools.png"
-                                        alt="使用ツール"
-                                    />
+                                    <img src="/assets/img/woksPage_tools.png" alt="使用ツール" />
                                 </h3>
                                 <p className="work_info-txt">{work.tools}</p>
                             </li>
                         )}
 
-                        {/* GitHub */}
                         {work.github && (
                             <li className="work_info-item">
                                 <h3 className="work_info-img">
-                                    <img
-                                        src="/assets/img/woksPage_gitHub-url.png"
-                                        alt="GitHubのURL"
-                                    />
+                                    <img src="/assets/img/woksPage_gitHub-url.png" alt="GitHubのURL" />
                                 </h3>
                                 <a
                                     href={work.github}
@@ -97,32 +79,28 @@ export default function WorkDetailPage({ params }: WorkDetailProps) {
                         {work.description.map((desc, index) => (
                             <div key={index}>
                                 <dt>{desc.dt}</dt>
-                                <dd
-                                    dangerouslySetInnerHTML={{ __html: desc.dd }}
-                                />
+                                <dd dangerouslySetInnerHTML={{ __html: desc.dd }} />
                             </div>
                         ))}
                     </dl>
 
-                    {/* ページショット */}
                     {work.shots && (
                         <div className="work_pageShot-zone">
                             <img
                                 className="work_pageShot-pc"
                                 src={work.shots.pc}
-                                alt={`${work.title}のPCサイズのページショット画像`}
+                                alt={`${work.title} PCページショット`}
                             />
                             <img
                                 className="work_pageShot-sp"
                                 src={work.shots.sp}
-                                alt={`${work.title}のSPサイズのページショット画像`}
+                                alt={`${work.title} SPページショット`}
                             />
                         </div>
                     )}
                 </div>
             </section>
 
-            {/* 下部に WorksList / ContactForm を再表示 */}
             <WorksList />
             <ContactForm />
         </>

@@ -35,21 +35,23 @@ export default function ContactForm() {
                 createdAt: serverTimestamp(),
             });
 
-            // ② SendGrid API Route へ通知（管理者＋ユーザー）
+            // ② Resend API Route へ送信
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(form),
             });
 
-            if (!res.ok) {
-                console.error("SendGrid API Error:", await res.text());
+            const result = await res.json();
+
+            if (!result.success) {
+                console.error("Resend API Error:", result);
                 alert("メール通知に失敗しました（Firestore には保存済み）");
+            } else {
+                alert("送信が完了しました！");
             }
 
-            alert("送信が完了しました！");
-
-            // フォームを空にする
+            // フォームを空に戻す
             setForm({
                 lastName: "",
                 firstName: "",
@@ -58,8 +60,9 @@ export default function ContactForm() {
                 confirmEmail: "",
                 message: "",
             });
+
         } catch (error) {
-            console.error("Error adding document: ", error);
+            console.error("Error:", error);
             alert("送信に失敗しました");
         }
     };

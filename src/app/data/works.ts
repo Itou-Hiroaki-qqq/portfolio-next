@@ -60,10 +60,10 @@ export const works: Work[] = [
 
     {
         id: "portfolio",
-        title: "ポートフォリオサイト(vue.js)",
+        title: "ポートフォリオサイト(React/Next.js)",
         category: "Website ｜ 自主制作",
         role: "Direction / Design / Coding",
-        tools: "Figma / Photoshop / Illustrator / HTML / CSS / JavaScript / vue.js / firebase",
+        tools: "Figma / Photoshop / React / Next.js / typescript / firebase",
         period: [
             { task: "企画・ワイヤーフレーム", duration: "2日" },
             { task: "デザイン", duration: "3日" },
@@ -71,17 +71,17 @@ export const works: Work[] = [
         ],
         description: [
             { dt: "制作概要", dd: "副業や転職に向けて、Webコーダー／フロントエンドエンジニアとしてのポートフォリオを制作" },
-            { dt: "ターゲット", dd: "コーディング案件を募集しているクライアントや、採用担当者" },
+            { dt: "ターゲット", dd: "コーディング案件を募集しているクライアントや採用担当者" },
             { dt: "情報設計", dd: "デザイン性は必要最低限に抑え、スキル・制作物に注目が集まるよう設計" },
             { dt: "デザイン", dd: "「信頼感」を伝えるために青みのある配色とシンプルな構成を採用" },
-            { dt: "コーディング", dd: "HTML5＋CSS3でレスポンシブ対応。BEM設計を採用し、gridレイアウトで拡張性も確保。静的サイトとして制作したものを後にvue.js化。" },
-            { dt: "工夫点", dd: "vue.js化に際しては、今後servicies、skills、worksの項目を効率的に増やせるようループ処理を施した。またコンタクトフォームをfirebase、SendGridを使って自作した。" },
+            { dt: "コーディング", dd: "Next.js（App Router）を採用し、ページ単位のコード分割やルーティングの最適化を実施。<br>services・skills・worksはすべて型定義されたデータ構造からループ生成し、項目追加時もUI修正不要な拡張性の高い構成で実装。<br>またFirebaseとResend を用いて問い合わせフォームとメール通知機能を作成し、実際に運用できるWebアプリケーションとして構築した。" },
+            { dt: "工夫点", dd: "コンポーネントごとに分けて整理し、どのページでも共通して使えるように作ることで、修正や機能追加に強い構造を意識した。<br>また、services・skills・worksなどのデータは1か所にまとめて管理し、内容を増やしたい時もコードを書き直さずに追加できる仕組みで作成。<br>問い合わせフォームには Firebase（Firestore）とResendを組み合わせ、データ保存とメール通知が自動で行われるように実装。バックエンドを用意しなくても運用できる問い合わせシステムを構築した。" },
             {
                 dt: "デモURL",
-                dd: '<a href="https://ito-hiroaki.sakura.ne.jp/tech_portfolio_vue/" target="_blank" rel="noopener noreferrer" class="link-hover">https://ito-hiroaki.sakura.ne.jp/tech_portfolio_vue/</a>'
+                dd: '<a href="https://portfolio-next-pi-gold.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-hover">https://portfolio-next-pi-gold.vercel.app/</a>'
             }
         ],
-        github: "https://github.com/Itou-Hiroaki-qqq/tech_portfolio_vue",
+        github: "https://github.com/Itou-Hiroaki-qqq/portfolio-next",
         imageMain: "/assets/img/worksPage_tech-portfolio.jpg",
         shots: {
             pc: "/assets/img/works_pageshot_tech-portfolio-vue-pc.png",
@@ -192,3 +192,35 @@ export const works: Work[] = [
         }
     }
 ];
+
+// ↓過去に使用した項目
+// {
+//     id: "portfolio",
+//         title: "ポートフォリオサイト(vue.js)",
+//             category: "Website ｜ 自主制作",
+//                 role: "Direction / Design / Coding",
+//                     tools: "Figma / Photoshop / Illustrator / HTML / CSS / JavaScript / vue.js / firebase",
+//                         period: [
+//                             { task: "企画・ワイヤーフレーム", duration: "2日" },
+//                             { task: "デザイン", duration: "3日" },
+//                             { task: "コーディング", duration: "12日" }
+//                         ],
+//                             description: [
+//                                 { dt: "制作概要", dd: "副業や転職に向けて、Webコーダー／フロントエンドエンジニアとしてのポートフォリオを制作" },
+//                                 { dt: "ターゲット", dd: "コーディング案件を募集しているクライアントや、採用担当者" },
+//                                 { dt: "情報設計", dd: "デザイン性は必要最低限に抑え、スキル・制作物に注目が集まるよう設計" },
+//                                 { dt: "デザイン", dd: "「信頼感」を伝えるために青みのある配色とシンプルな構成を採用" },
+//                                 { dt: "コーディング", dd: "HTML5＋CSS3でレスポンシブ対応。BEM設計を採用し、gridレイアウトで拡張性も確保。静的サイトとして制作したものを後にvue.js化。" },
+//                                 { dt: "工夫点", dd: "vue.js化に際しては、今後servicies、skills、worksの項目を効率的に増やせるようループ処理を施した。またコンタクトフォームをfirebase、SendGridを使って自作した。" },
+//                                 {
+//                                     dt: "デモURL",
+//                                     dd: '<a href="https://ito-hiroaki.sakura.ne.jp/tech_portfolio_vue/" target="_blank" rel="noopener noreferrer" class="link-hover">https://ito-hiroaki.sakura.ne.jp/tech_portfolio_vue/</a>'
+//                                 }
+//                             ],
+//                                 github: "https://github.com/Itou-Hiroaki-qqq/tech_portfolio_vue",
+//                                     imageMain: "/assets/img/worksPage_tech-portfolio.jpg",
+//                                         shots: {
+//         pc: "/assets/img/works_pageshot_tech-portfolio-vue-pc.png",
+//             sp: "/assets/img/works_pageshot_tech-portfolio-vue-sp.png"
+//     }
+// },

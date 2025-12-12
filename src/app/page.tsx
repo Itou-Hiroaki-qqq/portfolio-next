@@ -84,8 +84,8 @@ export default function HomePage() {
                 </p>
                 <p className="about_txt">
                   1980年生まれ。東京都出身。<br />
-                  製薬会社営業、金融会社コールセンター、中学校教員を経て、現在はデジタルハリウッドSTUDIO by
-                  LIG、テックアカデミーにてWebデザインやコーディング、WordPress、Vue.Js、PHPを学んでいる。
+                  製薬会社営業、金融会社コールセンター、中学校教員を経て、デジタルハリウッドSTUDIO by
+                  LIG、テックアカデミーにてWebデザインやコーディング、WordPress、Vue.js、PHPを学習。現在はReact/Next.jsを学びつつ、知人のWeb制作会社にてコーディングの実務経験を積んでいる。
                 </p>
               </div>
             </div>

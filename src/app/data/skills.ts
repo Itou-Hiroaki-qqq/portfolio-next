@@ -37,6 +37,20 @@ export const skills: SkillGroup[] = [
                 img: "/assets/img/skills_03_JavaScript.png",
                 link: "https://icons8.com/icon/PXTY4q2Sq2lG/javascript",
                 text: "jQueryに依存せずにドロワー、モーダルウィンドウ、アコーディオン、タブメニューなどのUI実装が可能。"
+            },
+            {
+                id: "tailwind",
+                name: "TailwindCSS / DaisyUI",
+                img: "/assets/img/skills_TailwindCSS.png",
+                link: "https://icons8.com/icon/x7XMNGh2vdqA/tailwind-css",
+                text: "ユーティリティクラスによる効率的なスタイル設計が可能。コンポーネント構築をDaisyUIで行い、素早いUI作成に対応可能。"
+            },
+            {
+                id: "ts",
+                name: "TypeScript",
+                img: "/assets/img/skills_typescript.png",
+                link: "https://icons8.com/icon/wpZmKzk11AzJ/typescript",
+                text: "型定義によりバグを事前に防ぎながら、安全なコードを書くための基礎を習得。React/Next.jsと組み合わせた開発を経験。"
             }
         ]
     },
@@ -74,14 +88,21 @@ export const skills: SkillGroup[] = [
                 name: "React / Next.js",
                 img: "/assets/img/skills_07_react.png",
                 link: "https://icons8.com/icon/asWSSTBrDlTW/react",
-                text: "ポートフォリオサイトを構築できるレベルの知識を有し、SPA開発や状態管理、コンポーネント設計に対応可能。"
+                text: "Firebase / Supabase のデータ管理や認証、楽天API・GeminiAPI との連携、在庫管理アプリ・検索アプリなど実際に動くアプリの構築、Vercel へのデプロイなどが可能"
             },
             {
                 id: "vue",
                 name: "Vue.js / Nuxt.js",
                 img: "/assets/img/skills_08_vue.png",
                 link: "https://icons8.com/icon/eETV3RNHVrWA/vuejs",
-                text: "ポートフォリオサイトを構築できるレベルの知識を有し、SPA開発や状態管理、コンポーネント設計に対応可能。"
+                text: "Firebase（Firestore / Authentication）を使ったデータ管理、楽天API・GeminiAPIの外部連携、お気に入り機能付きアプリやレシピ検索アプリなど、実用レベルのアプリを構築可能。"
+            },
+            {
+                id: "laravel",
+                name: "PHP / Laravel",
+                img: "/assets/img/skills_PHP.png",
+                link: "https://icons8.com/icon/plPz67QUdeWA/php",
+                text: "Laravelを用いたCRUD機能の実装、ルーティング、認証、バリデーションの基本操作が可能。Supabaseと連携した在庫管理アプリを構築し、デプロイまで経験"
             },
             {
                 id: "wp",
@@ -89,7 +110,21 @@ export const skills: SkillGroup[] = [
                 img: "/assets/img/skills_09_WordPress.png",
                 link: "https://icons8.com/icon/v9uZbuVoWleB/wordpress",
                 text: "クラシックテーマによる自由なデザインの構築、サーバーアップロード、カスタム投稿タイプ・カスタムフィールドの実装が可能。"
-            }
+            },
+            {
+                id: "firebase",
+                name: "Firebase",
+                img: "/assets/img/skills_firebase.png",
+                link: "https://icons8.com/icon/87330/google-firebase-console",
+                text: "Firestoreを用いたデータ管理、Authenticationによるユーザー認証、ストレージ利用など、Web アプリ構築に必要な基本機能を扱える。"
+            },
+            {
+                id: "supabase",
+                name: "Supabase",
+                img: "/assets/img/skills_supabase.png",
+                link: "https://icons8.com/icon/sH0rW2TvYdr9/supabase",
+                text: "PostgreSQLベースのデータベース操作、API自動生成、認証機能の利用が可能。Next.jsとの連携によるアプリ開発を経験。"
+            },
         ]
     },
     {
@@ -102,6 +137,13 @@ export const skills: SkillGroup[] = [
                 img: "/assets/img/skills_10_vscode.png",
                 link: "https://icons8.com/icon/9OGIyU8hrxW5/visual-studio-code-2019",
                 text: "エメットによる効率的コーディング、拡張機能活用、Git連携が可能。"
+            },
+            {
+                id: "docker",
+                name: "Docker",
+                img: "/assets/img/skills_docker.png",
+                link: "https://icons8.com/icon/cdYUlRaag9G9/docker",
+                text: "コンテナ環境の構築、Dockerfile/docker-composeの基本的な操作が可能。実務でもローカル開発環境の構築に使用。"
             },
             {
                 id: "figma",

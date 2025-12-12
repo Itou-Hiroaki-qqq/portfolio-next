@@ -32,8 +32,8 @@ img {
 
 .s-wrapper {
     max-width: 62.5rem;
-    margin: 120px auto 0;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 120px 1rem 0;
 }
 
 .section_title {

@@ -6,8 +6,10 @@ import { skills } from "./data/skills";
 import { works } from "./data/works";
 
 import ServiceCard from "./components/ServiceCard";
+import WorkExperienceList from "./components/WorkExperienceList";
 import SkillCard from "./components/SkillCard";
 import WorksList from "./components/WorksList";
+import WorksAppList from "./components/WorksAppList";
 import ContactForm from "./components/ContactForm";
 
 export default function HomePage() {
@@ -44,6 +46,9 @@ export default function HomePage() {
           </ul>
         </section>
 
+        {/* Work Experience */}
+        <WorkExperienceList />
+
         {/* Skills */}
         <section className="skills s-wrapper" id="skills">
           <h2 className="section_title">Skills</h2>
@@ -66,6 +71,9 @@ export default function HomePage() {
 
         {/* Works */}
         <WorksList />
+
+        {/* Works - App */}
+        <WorksAppList />
 
         {/* About */}
         <section className="about wrapper" id="about">

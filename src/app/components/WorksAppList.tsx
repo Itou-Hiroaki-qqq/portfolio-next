@@ -1,17 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { works, Work } from "../data/works";
+import { worksApp, WorkApp } from "../data/worksApp";
 
-export default function WorksList() {
+export default function WorksAppList() {
     return (
-        <section className="works wrapper" id="works">
-            <h2 className="section_title">Works - Website</h2>
+        <section className="works wrapper">
+            <h2 className="section_title">Works - App</h2>
 
             <ul className="works_list">
-                {works.map((work: Work) => (
+                {worksApp.map((work: WorkApp) => (
                     <li className="works_item" key={work.id}>
-                        <Link href={`/works/${work.id}`}>
+                        <Link href={`/worksApp/${work.id}`}>
                             <div className="works_inner">
                                 <div className="works_imgBox">
                                     <img

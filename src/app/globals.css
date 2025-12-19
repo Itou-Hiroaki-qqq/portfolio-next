@@ -428,6 +428,103 @@ services
 
 } /* @media  (min-width:48.0625rem) */
 
+/*
+work-experience
+================================================ */
+.work-experience {
+  margin-top: 60px;
+  scroll-margin-top: 5rem;
+}
+
+/* ★ 白背景ラッパー（トップ / 詳細 両対応） */
+.work-experience_box,
+.work-experience_zone {
+  margin-top: 30px;
+  padding: 24px 16px;
+  background-color: #FEFEFE;
+  border-radius: 10px;
+}
+
+/* リスト */
+.work-experience_list {
+  margin-top: 0;
+}
+
+/* 各案件 */
+.work-experience_item {
+  padding-bottom: 24px;
+}
+
+/* 境界線 */
+.work-experience_item:not(:last-of-type) {
+  border-bottom: 1px solid #e1e6eb;
+  margin-bottom: 24px;
+}
+
+/* 年月 */
+.work-experience_date {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 内容 */
+.work-experience_text {
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 「実務経験の詳細へ」 */
+.work-experience_more {
+  margin-top: 24px;
+  text-align: right;
+}
+
+.work-experience_moreLink {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+
+  background-color: #f4f7f9;
+  border: 1px solid #d0d7de;
+  color: #172835;
+
+  transition: background-color 0.25s ease,
+              box-shadow 0.25s ease,
+              transform 0.25s ease;
+}
+
+.work-experience_moreLink:hover {
+  background-color: #f6fafd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+/* work-experience PC */
+@media (min-width:48.0625rem) {
+  .work-experience {
+    margin-top: 60px;
+    padding: 60px 0;
+    scroll-margin-top: 1.875rem;
+  }
+
+  .work-experience_box,
+  .work-experience_zone {
+    padding: 40px;
+  }
+
+  .work-experience_item {
+    padding-bottom: 32px;
+  }
+
+  .work-experience_item:not(:last-of-type) {
+    margin-bottom: 32px;
+  }
+}
+
+
 
 /*
 skills

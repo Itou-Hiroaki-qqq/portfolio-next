@@ -28,7 +28,7 @@ export default function SiteFooter() {
                                 <Link href="/#skills">Skills</Link>
                             </li>
 
-                            {/* ▼ PC専用：Works ドロップダウン */}
+                            {/* PC専用：Works ドロップダウン */}
                             <li className="footer_nav-item footer_nav-item--dropdown footer_nav-item--pc">
                                 <span className="footer_nav_link">Works</span>
                                 <ul className="footer_nav_sublist">
@@ -41,7 +41,7 @@ export default function SiteFooter() {
                                 </ul>
                             </li>
 
-                            {/* ▼ SP専用 */}
+                            {/* SP専用 */}
                             <li className="footer_nav-item footer_nav-item--sp">
                                 <Link href="/#works">Works - Website</Link>
                             </li>

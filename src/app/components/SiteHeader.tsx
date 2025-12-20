@@ -49,7 +49,7 @@ export default function SiteHeader() {
                             <Link href="/#skills" onClick={closeMenu}>Skills</Link>
                         </li>
 
-                        {/* ▼ PC専用：Works（ドロップダウン） */}
+                        {/* PC専用：Works（ドロップダウン） */}
                         <li className="nav_item nav_item--dropdown nav_item--pc">
                             <span className="nav_link">Works</span>
                             <ul className="nav_sublist">
@@ -66,14 +66,14 @@ export default function SiteHeader() {
                             </ul>
                         </li>
 
-                        {/* ▼ SP専用：Works - Website */}
+                        {/* SP専用：Works - Website */}
                         <li className="nav_item nav_item--sp">
                             <Link href="/#works" onClick={closeMenu}>
                                 Works - Website
                             </Link>
                         </li>
 
-                        {/* ▼ SP専用：Works - App */}
+                        {/* SP専用：Works - App */}
                         <li className="nav_item nav_item--sp">
                             <Link href="/#works-app" onClick={closeMenu}>
                                 Works - App

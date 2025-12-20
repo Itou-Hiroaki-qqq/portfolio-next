@@ -1,4 +1,3 @@
-// app/page.tsx
 import Image from "next/image";
 
 import { services } from "./data/services";

@@ -1,4 +1,3 @@
-// app/components/ServiceCard.tsx
 type Service = {
     id: number;
     title: string;
@@ -18,7 +17,6 @@ export default function ServiceCard({ service }: { service: Service }) {
 
             <h3 className="services_title">{service.title}</h3>
 
-            {/* v-html 相当 → dangerouslySetInnerHTML */}
             <p
                 className="services_txt"
                 dangerouslySetInnerHTML={{ __html: service.description }}

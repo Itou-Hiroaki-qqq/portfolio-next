@@ -1,4 +1,3 @@
-// app/components/SkillCard.tsx
 type SkillItem = {
     id: string;
     name: string;
@@ -19,7 +18,6 @@ export default function SkillCard({
             <div className="skills_item-imgZone">
                 <p className="skills_item-name">{item.name}</p>
 
-                {/* Vue の <component is=""> を TSX で再現 */}
                 {item.link ? (
                     <a
                         href={item.link}
@@ -35,7 +33,6 @@ export default function SkillCard({
                 )}
             </div>
 
-            {/* v-html を再現 */}
             <p
                 className="skills_item-txt"
                 dangerouslySetInnerHTML={{ __html: item.text }}

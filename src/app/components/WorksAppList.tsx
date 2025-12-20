@@ -5,7 +5,7 @@ import { worksApp, WorkApp } from "../data/worksApp";
 
 export default function WorksAppList() {
     return (
-        <section className="works wrapper">
+        <section className="works wrapper" id="works-app">
             <h2 className="section_title">Works - App</h2>
 
             <ul className="works_list">
